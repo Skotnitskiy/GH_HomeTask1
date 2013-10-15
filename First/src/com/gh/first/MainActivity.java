@@ -16,11 +16,11 @@ public class MainActivity extends FragmentActivity {
 
 	public void onSelectFragment(View view) {
 		Fragment page = new Fragment();
-		if (view == findViewById(R.id.btnStartFrag)) {
+		if (view == findViewById(R.id.btnPage1)) {
 			page = new Page1();
-		} else if (view == findViewById(R.id.btnFrag1)) {
+		} else if (view == findViewById(R.id.btnPage2)) {
 			page = new Page2();
-		} else if (view == findViewById(R.id.btnFrag2)) {
+		} else if (view == findViewById(R.id.btnPage3)) {
 			page = new Page3();
 		}
 

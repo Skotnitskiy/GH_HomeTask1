@@ -17,21 +17,21 @@
         android:orientation="vertical" >
 
         <Button
-            android:id="@+id/btnStartFrag"
+            android:id="@+id/btnPage1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Page 1" 
             android:onClick="onSelectFragment"/>
 
         <Button
-            android:id="@+id/btnFrag1"
+            android:id="@+id/btnPage2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Page 2" 
              android:onClick="onSelectFragment"/>
 
         <Button
-            android:id="@+id/btnFrag2"
+            android:id="@+id/btnPage3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Page 3"
