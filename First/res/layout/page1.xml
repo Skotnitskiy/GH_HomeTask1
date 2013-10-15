@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Я хочу стать программистом, когда выросту большим, потому что это классная работа и простая. Поэтому в наше время столько программистов и все время становится больше.Программистам не нужно ходить в школу, им нужно учиться читать на компьютерном языке, что бы они могли с компьютером разговаривать. Думаю, что они должны уметь читать тоже, что бы знать в чем дело, когда все напереполох.Программисты должны быть смелыми, что бы не пугаться, когда все перепуталось так что никто не разберет, или если придется разговаривать на английском языке по-иностранному, что бы знать, что надо делать."
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</LinearLayout>

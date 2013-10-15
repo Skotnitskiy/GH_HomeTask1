@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="У программистов должно быть хорошее зрение, что бы видеть сквозь одежду и что бы не бояться секретарш, потому что с ними приходиться работать. 
+		Еще мне нравитса зарплата, которую программисты получают. Они получают столько денег, что не успевают их все тратить. Это происходит потому, что все считают работу программиста трудной, кроме программистов, которые знают, как это просто."
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</LinearLayout>
