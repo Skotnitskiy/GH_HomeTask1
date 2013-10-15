@@ -15,17 +15,17 @@ public class MainActivity extends FragmentActivity {
 	}
 
 	public void onSelectFragment(View view) {
-		Fragment newFragment = new Fragment();
+		Fragment page = new Fragment();
 		if (view == findViewById(R.id.btnStartFrag)) {
-			newFragment = new StartFragment();
+			page = new Page1();
 		} else if (view == findViewById(R.id.btnFrag1)) {
-			newFragment = new Fragment1();
+			page = new Page2();
 		} else if (view == findViewById(R.id.btnFrag2)) {
-			newFragment = new Fragment2();
+			page = new Page3();
 		}
 
 		FragmentTransaction tr = getSupportFragmentManager().beginTransaction()
-				.replace(R.id.fragment_placeholder, newFragment);
+				.replace(R.id.fragment_placeholder, page);
 		tr.commit();
 
 	}
