@@ -11,40 +11,47 @@
     tools:context=".MainActivity" >
 
     <LinearLayout
-        android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_weight="1.11"
         android:orientation="vertical" >
 
         <Button
             android:id="@+id/btnPage1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Page 1" 
-            android:onClick="onSelectFragment"/>
+            android:onClick="onSelectFragment"
+            android:text="Page 1" />
 
         <Button
             android:id="@+id/btnPage2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Page 2" 
-             android:onClick="onSelectFragment"/>
+            android:onClick="onSelectFragment"
+            android:text="Page 2" />
 
         <Button
             android:id="@+id/btnPage3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Page 3"
-             android:onClick="onSelectFragment" />
+            android:onClick="onSelectFragment"
+            android:text="Page 3" />
 
+        <Button
+            android:id="@+id/btnAnims"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:onClick="onSelectFragment"
+            android:text="Anims" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/fragment_placeholder"
-        android:layout_weight="3"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_weight="2.51"
         android:orientation="vertical" >
+
     </LinearLayout>
 
 </LinearLayout>
