@@ -1120,10 +1120,11 @@ containing a value of this type.
         public static final int anims_layout=0x7f030018;
         public static final int dravwer_items=0x7f030019;
         public static final int drawer=0x7f03001a;
-        public static final int page1=0x7f03001b;
-        public static final int page2=0x7f03001c;
-        public static final int page3=0x7f03001d;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
+        public static final int menu=0x7f03001b;
+        public static final int page1=0x7f03001c;
+        public static final int page2=0x7f03001d;
+        public static final int page3=0x7f03001e;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001f;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
