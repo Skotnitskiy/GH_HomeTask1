@@ -2,55 +2,79 @@ package com.exe.first;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBar.OnNavigationListener;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
-import android.widget.SpinnerAdapter;
+import android.widget.ListView;
 
-public class MainActivity extends ActionBarActivity implements OnNavigationListener {
+public class MainActivity extends ActionBarActivity implements
+		OnItemClickListener {
+	private String[] mTitles;
+	DrawerLayout mDrawerLayout;
+	ListView mDrawerList;
+	public ActionBarDrawerToggle mDrawerToggle;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		ActionBar bar = getSupportActionBar();
-		bar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
-		SpinnerAdapter mSpinnerAdapter = ArrayAdapter.createFromResource(this, R.array.action_array,
-		          android.R.layout.simple_spinner_dropdown_item);
-		bar.setListNavigationCallbacks(mSpinnerAdapter, this);
-		
-		
+		setContentView(R.layout.drawer);
+		mTitles = getResources().getStringArray(R.array.drawer_names);
+		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+		mDrawerList = (ListView) findViewById(R.id.left_drawer);
+
+		mDrawerList.setAdapter(new ArrayAdapter<String>(this,
+				R.layout.dravwer_items, mTitles));
+
+		mDrawerList.setOnItemClickListener(this);
+
+		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
+				R.drawable.ic_navigation_drawer_indicator,
+				R.string.drawer_open, R.string.drawer_close) {
+
+			public void onDrawerClosed(View view) {
+				getSupportActionBar().setTitle(R.string.app_name);
+			}
+
+			public void onDrawerOpened(View drawerView) {
+				getSupportActionBar().setTitle("Navigation Drawer");
+			}
+		};
+		mDrawerLayout.setDrawerListener(mDrawerToggle);
 	}
 
-	public void onSelectFragment(View view) {
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position,
+			long id) {
+		selectItem(position);
+	}
+
+	private void selectItem(int position) {
 		Fragment page = new Fragment();
 		Intent anmIntent = new Intent();
-		if (view == findViewById(R.id.btnPage1)) {
+		switch (position) {
+		case 0:
 			page = new Page1();
-		} else if (view == findViewById(R.id.btnPage2)) {
+			break;
+		case 1:
 			page = new Page2();
-		} else if (view == findViewById(R.id.btnPage3)) {
+			break;
+		case 2:
 			page = new Page3();
-		} else if(view == findViewById(R.id.btnAnims)){
+			break;
+		case 3:
 			anmIntent.setClass(this, Anims.class);
 			startActivity(anmIntent);
-			finish();
 		}
-
 		FragmentTransaction tr = getSupportFragmentManager().beginTransaction()
-				.replace(R.id.fragment_placeholder, page);
+				.replace(R.id.content_frame, page);
+		tr.addToBackStack(null);
 		tr.commit();
-
 	}
 
-	
-	@Override
-	public boolean onNavigationItemSelected(int arg0, long arg1) {
-	
-		return false;
-	}
 }
