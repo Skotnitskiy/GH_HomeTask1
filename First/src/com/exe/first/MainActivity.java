@@ -53,6 +53,7 @@ public class MainActivity extends ActionBarActivity implements
 		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 	}
+
 	
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
@@ -92,6 +93,7 @@ public class MainActivity extends ActionBarActivity implements
 			anmIntent.setClass(this, Anims.class);
 			startActivity(anmIntent);
 		}
+		mDrawerLayout.closeDrawer(mDrawerList);
 		FragmentTransaction tr = getSupportFragmentManager().beginTransaction()
 				.replace(R.id.content_frame, page);
 		tr.addToBackStack(null);
