@@ -2,16 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" >
+    android:orientation="vertical" >
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
         <Button
             android:id="@+id/btnZoomOut"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onLoadAnim"
             android:text="ZoomOut" />
@@ -50,37 +50,37 @@
             android:layout_height="wrap_content"
             android:onClick="onBack"
             android:text="Back" />
+    </LinearLayout>
 
-        <ImageView
-            android:id="@+id/imageView1"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:layout_gravity="fill_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/txtMsg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/img_phone" />
+            android:layout_gravity="center_vertical"
+            android:text="          YAHOO!    "
+            android:textSize="60sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
 
     </LinearLayout>
  
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="horizontal" >
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/imageView1"
             android:layout_width="wrap_content"
-            android:layout_height="358dp"
-            android:layout_gravity="center"
-            android:orientation="horizontal" >
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_tablet" />
 
-            <TextView
-                android:id="@+id/txtMsg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="     YAHOO!"
-                android:textSize="40sp"
-                android:textStyle="bold"
-                android:visibility="visible" />
-
-        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

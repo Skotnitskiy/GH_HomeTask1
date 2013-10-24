@@ -2,6 +2,7 @@ package com.exe.first;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.animation.Animation;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 public class Anims extends FragmentActivity implements AnimationListener {
 	TextView txtMessage;
 	Button btnStart;
+	Fragment imgFragment;
 
 	// Animation
 	Animation animFadein;
@@ -24,6 +26,7 @@ public class Anims extends FragmentActivity implements AnimationListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.anims_layout);
 		txtMessage = (TextView) findViewById(R.id.txtMsg);
+		imgFragment = new Fragment();
 
 	}
 

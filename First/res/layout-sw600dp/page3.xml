@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Нет ничего такого, что бы мне не понравилось, кроме того что девочкам нравятся программисты и все хотят выйти за них замуж, и поэтому женщин надо гнать, что бы не мешали работать. 
+		Надеюсь, что у меня нет аллергии на офисную пыль, потому что на нашу собаку у меня аллергия. Eсли у меня будет аллергия на офисную пыль, программиста из меня не получится и придется искать настоящую работу."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="35sp" />
+
+</LinearLayout>
