@@ -15,7 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class MainActivity extends ActionBarActivity implements
-		OnItemClickListener{
+		OnItemClickListener {
 	private String[] mTitles;
 	DrawerLayout mDrawerLayout;
 	ListView mDrawerList;
@@ -34,9 +34,7 @@ public class MainActivity extends ActionBarActivity implements
 
 		mDrawerList.setOnItemClickListener(this);
 
-		mDrawerToggle = new ActionBarDrawerToggle(
-				this,
-				mDrawerLayout,
+		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
 				R.drawable.ic_navigation_drawer_indicator,
 				R.string.drawer_open, R.string.drawer_close) {
 
@@ -49,25 +47,24 @@ public class MainActivity extends ActionBarActivity implements
 			}
 		};
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
-		
+
 		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
-	
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
-	    super.onPostCreate(savedInstanceState);
-	    mDrawerToggle.syncState();
+		super.onPostCreate(savedInstanceState);
+		mDrawerToggle.syncState();
 	}
-	
+
 	@Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-		if(mDrawerToggle.onOptionsItemSelected(item)) 
+	public boolean onOptionsItemSelected(MenuItem item) {
+		if (mDrawerToggle.onOptionsItemSelected(item))
 			return true;
-      
-      return super.onOptionsItemSelected(item);
-    }
+
+		return super.onOptionsItemSelected(item);
+	}
 
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
@@ -76,7 +73,7 @@ public class MainActivity extends ActionBarActivity implements
 	}
 
 	private void selectItem(int position) {
-		
+
 		Fragment page = new Fragment();
 		Intent anmIntent = new Intent();
 		switch (position) {
@@ -92,6 +89,11 @@ public class MainActivity extends ActionBarActivity implements
 		case 3:
 			anmIntent.setClass(this, Anims.class);
 			startActivity(anmIntent);
+			break;
+		case 4:
+			anmIntent.setClass(this, MasterListActivity.class);
+			startActivity(anmIntent);
+			
 		}
 		mDrawerLayout.closeDrawer(mDrawerList);
 		FragmentTransaction tr = getSupportFragmentManager().beginTransaction()

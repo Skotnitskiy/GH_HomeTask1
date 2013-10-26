@@ -2,13 +2,34 @@
 <resources>
 
     <string name="app_name">First</string>
-     <string-array name="drawer_names">
-            <item>Page 1</item>
-            <item>Page 2</item>
-            <item>Page 3</item>
-            <item>Anims</item>
-       
+
+    <string-array name="drawer_names">
+        <item>Page 1</item>
+        <item>Page 2</item>
+        <item>Page 3</item>
+        <item>Anims</item>
+        <item>Home Task 3</item>
     </string-array>
+
+    <string name="pick_label">Pick a Comic Date</string>
+
+    <string-array name="strip_dates">
+        <item>October 24, 2011</item>
+        <item>October 25, 2011</item>
+        <item>October 26, 2011</item>
+        <item>October 27, 2011</item>
+        <item>October 28, 2011</item>
+        <item>October 29, 2011</item>
+    </string-array>
+    <string-array name="strip_refs">
+        <item>20111024</item>
+        <item>20111025</item>
+        <item>20111026</item>
+        <item>20111027</item>
+        <item>20111028</item>
+        <item>20111029</item>
+    </string-array>
+
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="action_websearch">Web search</string>

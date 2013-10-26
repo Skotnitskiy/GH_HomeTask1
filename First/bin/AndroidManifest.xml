@@ -7,6 +7,7 @@
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -24,6 +25,8 @@
             </intent-filter>
         </activity>
         <activity android:name="Anims"></activity>
+        <activity android:name="MasterListActivity"></activity>
+        <activity android:name="DetailViewActivity"></activity>
     </application>
 
 </manifest>

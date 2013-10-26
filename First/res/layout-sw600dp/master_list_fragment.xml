@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <fragment
+        android:id="@+id/fragment_masterlist"
+        android:name="com.exe.first.MasterListFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="21.15" />
+
+    <fragment
+        android:id="@+id/fragment_detailview"
+        android:name="com.exe.first.DetailViewFragment"
+        android:layout_width="388dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_weight="3.19" >
+
+    </fragment>
+
+</LinearLayout>

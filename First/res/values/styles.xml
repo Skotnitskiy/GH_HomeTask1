@@ -17,5 +17,5 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
- <style name="Compat" parent="@style/Theme.AppCompat.Light" ></style>
+ <style name="Compat" parent="@style/Theme.AppCompat" ></style>
 </resources>
